@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <a href="/">Untitled UI</a>
+          <a href="/">Dyota</a>
         </div>
         <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
           <ul>
