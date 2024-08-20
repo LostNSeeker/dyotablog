@@ -7,7 +7,7 @@ function HomePage() {
     <div>
       <Header />
       <div className="hero-section">
-        <h2>Untitled blog</h2>
+        <h2>Dyota</h2>
         <p>
           Tool and strategies modern teams need to help their companies grow.
         </p>
