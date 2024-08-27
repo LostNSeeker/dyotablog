@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
 const Footer = () => {
@@ -86,12 +88,10 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© 2024 Untitled UI. All rights reserved.</p>
         <div className="footer-social-icons">
-          <a href="#"><img src="social-icon-url.png" alt="Icon" /></a>
-          <a href="#"><img src="social-icon-url.png" alt="Icon" /></a>
-          <a href="#"><img src="social-icon-url.png" alt="Icon" /></a>
-          <a href="#"><img src="social-icon-url.png" alt="Icon" /></a>
-          <a href="#"><img src="social-icon-url.png" alt="Icon" /></a>
-          <a href="#"><img src="social-icon-url.png" alt="Icon" /></a>
+          <a href="https://facebook.com" ><FontAwesomeIcon icon={faFacebook} size="3x" /></a>
+          <a href="https://instagram.com"><FontAwesomeIcon icon={faInstagram} size="3x" /></a>
+          <a href="https://linkedin.com"><FontAwesomeIcon icon={faLinkedin} size="3x" /></a>
+          <a href="https://twitter.com"><FontAwesomeIcon icon={faTwitter} size="3x" /></a>
         </div>
       </div>
     </footer>
