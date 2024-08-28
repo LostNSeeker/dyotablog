@@ -31,8 +31,9 @@ const Signup = () => {
       navigate('/login');
       setUsers((prevUsers) => [...prevUsers, response.data]);
     } catch (error) {
-      console.error("Error signing up:", error);
-      setErrorMessage("Error signing up. Please try again.");
+      console.error("Error signing up:", 
+        error);
+      setErrorMessage("User Already exists");
     }
   };
 
