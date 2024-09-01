@@ -7,7 +7,9 @@ import BlogList from "./components/BlogList";
 import BlogCard from "./components/BlogCard";
 import ArticleGrid from "./components/ArticleGrid";
 import Signup from "./auth/Signup";
+import ForgotPassword from "./auth/ForgotPassword";
 import Login from "./auth/Login";
+import ResetPassword from "./auth/ResetPassword";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           } />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
         </Routes>
       </div>
     </Router>
