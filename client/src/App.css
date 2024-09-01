@@ -663,3 +663,23 @@
   border-radius: 4px;
   font-size: 12px;
 }
+
+
+/* Animation on page load */
+
+/* CSS for the animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the entire section */
+.blog-section {
+  animation: fadeIn 1.5s ease-in-out;
+}
