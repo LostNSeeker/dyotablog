@@ -12,7 +12,7 @@ const Login = () => {
 
     const { email, password } = formData;
     const navigate = useNavigate();
-
+    
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
     const onSubmit = async e => {
@@ -22,6 +22,8 @@ const Login = () => {
         try {
             const response = await axios.post('http://localhost:5001/api/auth/login', { email, password });
             setMessage('Login successful!');
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('username', JSON.stringify({ username: response.data.username })); // Save the username
             document.cookie = `token=${response.data.token}; path=/; secure; HttpOnly; SameSite=Strict`;
             navigate('/');
         } catch (err) {
@@ -29,7 +31,7 @@ const Login = () => {
         } finally {
             setIsLoading(false);
         }
-    };
+    };    
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4 sm:p-6">

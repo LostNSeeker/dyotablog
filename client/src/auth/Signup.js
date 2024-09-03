@@ -28,6 +28,8 @@ const Signup = () => {
       });
       
       console.log("User signed up successfully:", response.data);
+      localStorage.setItem('token', response.data.token); 
+      localStorage.setItem('username', JSON.stringify({ username }));
       navigate('/login');
       setUsers((prevUsers) => [...prevUsers, response.data]);
     } catch (error) {
