@@ -46,29 +46,36 @@ exports.login = async (req, res) => {
     const { email, password } = req.body;
 
     try {
+        // Check if the user exists
         let user = await User.findOne({ email });
         if (!user) {
             return res.status(400).json({ msg: "Invalid Credentials" });
         }
 
+        // Compare the provided password with the stored hashed password
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(400).json({ msg: "Invalid Credentials" });
         }
 
+        // Prepare the JWT payload
         const payload = {
             user: {
                 id: user.id,
             },
         };
 
+        // Sign the JWT and include the username in the response
         jwt.sign(
             payload,
             "a5debf3dde6e51c0ea3064175e210589b99335ffa3a53cb51f44999faacfab83f2ce3bc972c43eeba720e5fffaead000b114c109edf92bd4d35776f6c0e4ae2c",
             { expiresIn: 360000 },
             (err, token) => {
                 if (err) throw err;
-                res.json({ token });
+                res.json({
+                    token,
+                    username: user.username // Include the username in the response
+                });
             }
         );
     } catch (err) {
@@ -76,6 +83,7 @@ exports.login = async (req, res) => {
         res.status(500).send("Server error");
     }
 };
+
 
 exports.forgot_password = async (req,res) =>{
         const { email } = req.body;
