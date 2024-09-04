@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-logo-section">
           <div className="footer-logo">
             <a href="/">
-              <img src="your-logo-url.png" alt="Untitled UI" />
+              <img src="your-logo-url.png" alt="Dyota" />
             </a>
           </div>
           <p className="footer-description">
@@ -86,12 +86,12 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2024 Untitled UI. All rights reserved.</p>
+        <p>© 2024 Dyota . All rights reserved.</p>
         <div className="footer-social-icons">
-          <a href="https://facebook.com" ><FontAwesomeIcon icon={faFacebook} size="3x" /></a>
-          <a href="https://instagram.com"><FontAwesomeIcon icon={faInstagram} size="3x" /></a>
-          <a href="https://linkedin.com"><FontAwesomeIcon icon={faLinkedin} size="3x" /></a>
-          <a href="https://twitter.com"><FontAwesomeIcon icon={faTwitter} size="3x" /></a>
+          <a href="https://facebook.com" ><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
+          <a href="https://instagram.com"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
+          <a href="https://linkedin.com"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
+          <a href="https://twitter.com"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
         </div>
       </div>
     </footer>

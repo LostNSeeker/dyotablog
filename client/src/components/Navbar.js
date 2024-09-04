@@ -31,8 +31,8 @@ const Navbar = () => {
         </div>
         <div className="navbar-buttons">
           {auth ? (
-            <div className="flex items-center space-x-4">
-              <span className="text-gray-800 text-center">{JSON.parse(auth).username}</span>
+            <div className="flex items-center space-x-1">
+              <span className="text-gray-1000 text-center">Hello, {JSON.parse(auth).username}</span>
               <button onClick={logout} className="btn logout flex justify-around">Logout</button>
             </div>
           ) : (

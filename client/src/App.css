@@ -358,6 +358,7 @@
 
 .footer-social-icons a {
   margin-left: 10px;
+  padding: 5px;
 }
 
 .footer-social-icons img {
@@ -365,11 +366,7 @@
   filter: invert(100%);
 }
 
-
-
 /* Blog List */
-
-
 .latest-writings {
   position: relative;
   top:150px;
