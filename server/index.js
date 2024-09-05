@@ -1,6 +1,7 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
+const blogRoutes = require("./routes/blogRoutes");
 const cors = require('cors');
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(cors());
 
 // Define Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/blog", blogRoutes); // Changed to "/api/blog" for consistency
 
 const PORT = 5001;
 
