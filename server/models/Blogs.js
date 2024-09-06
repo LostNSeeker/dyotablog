@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
   }
 });
 
-// 2MB limit for image files
+// 2MB limit for image files and filter to accept only jpg, jpeg, png
 const upload = multer({
   storage: storage,
   limits: { fileSize: 2 * 1024 * 1024 }, // 2MB size limit
