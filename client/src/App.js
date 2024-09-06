@@ -11,6 +11,7 @@ import Signup from "./auth/Signup";
 import ForgotPassword from "./auth/ForgotPassword";
 import Login from "./auth/Login";
 import ResetPassword from "./auth/ResetPassword";
+import BlogGrid from "./components/BlogGrid";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
+            <BlogGrid/>
               <Navbar />
               <Hero />
               <ArticleGrid />

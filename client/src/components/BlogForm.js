@@ -72,59 +72,66 @@ const BlogForm = () => {
     };
 
     return (
-        <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
-            <h1>Create a New Blog Post</h1>
+        <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
+            <h1 className="text-2xl font-bold mb-6 text-center">Create a New Blog Post</h1>
             <form onSubmit={handleSubmit}>
-                <div style={{ marginBottom: '20px' }}>
-                    <label htmlFor="heading">Blog Heading</label>
+                <div className="mb-4">
+                    <label htmlFor="heading" className="block text-sm font-medium text-gray-700">Blog Heading</label>
                     <input
                         type="text"
                         id="heading"
                         value={heading}
                         onChange={(e) => setHeading(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '10px', marginTop: '5px' }}
+                        className="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                 </div>
 
-                <div style={{ marginBottom: '20px' }}>
-                    <label htmlFor="content">Blog Content</label>
+                <div className="mb-4">
+                    <label htmlFor="content" className="block text-sm font-medium text-gray-700">Blog Content</label>
                     <textarea
                         id="content"
                         rows="5"
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '10px', marginTop: '5px' }}
+                        className="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                 </div>
 
-                <div style={{ marginBottom: '20px' }}>
-                    <label htmlFor="image">Upload an Image</label>
+                <div className="mb-4">
+                    <label htmlFor="image" className="block text-sm font-medium text-gray-700">Upload an Image</label>
                     <input
                         type="file"
                         id="image"
                         accept="image/jpeg, image/png"
                         onChange={handleFileChange}
                         required
+                        className="mt-2 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     {imagePreview && (
-                        <div style={{ marginTop: '10px' }}>
-                            <img src={imagePreview} alt="Preview" style={{ maxWidth: '100%' }} />
+                        <div className="mt-4">
+                            <img src={imagePreview} alt="Preview" className="max-w-full h-auto rounded-md" />
                         </div>
                     )}
                 </div>
 
                 <button
                     type="submit"
-                    style={{ padding: '10px 20px', backgroundColor: '#28a745', color: '#fff', border: 'none', cursor: 'pointer' }}
+                    className={`w-full py-3 px-6 text-white rounded-md ${
+                        loading ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'
+                    }`}
                     disabled={loading}
                 >
                     {loading ? 'Submitting...' : 'Submit Blog Post'}
                 </button>
             </form>
 
-            {message && <p style={{ marginTop: '20px', color: message.includes('Error') ? 'red' : 'green' }}>{message}</p>}
+            {message && (
+                <p className={`mt-6 text-center text-sm ${message.includes('Error') ? 'text-red-500' : 'text-green-500'}`}>
+                    {message}
+                </p>
+            )}
         </div>
     );
 };
