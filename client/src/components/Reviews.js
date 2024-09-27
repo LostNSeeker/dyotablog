@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlogCard = () => {
+const Reviews = () => {
   return (
     <section className="join-startups-section">
       <div className="content">
@@ -37,4 +37,4 @@ const BlogCard = () => {
   );
 };
 
-export default BlogCard;
+export default Reviews;
