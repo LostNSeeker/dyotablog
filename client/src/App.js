@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import BlogList from "./components/BlogList";
-import BlogCard from "./components/BlogCard";
+import Reviews from "./components/Reviews";
 import ArticleGrid from "./components/ArticleGrid";
 import BlogForm from "./components/BlogForm"
 import Signup from "./auth/Signup";
@@ -24,10 +24,10 @@ function App() {
             <>
               <Navbar />
               <Hero />
-              <ArticleGrid />
-              <BlogList />
-              <BlogCard />
+              {/*<ArticleGrid />*/}
               <BlogGrid/>
+              <BlogList />
+              <Reviews />
               <Footer />
             </>
           } />

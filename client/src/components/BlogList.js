@@ -29,32 +29,33 @@ const BlogList = () => {
   ];
 
   return (
-    <section className="latest-writings">
-      <div className="header">
-        <h2>Latest writings</h2>
-        <p>The latest news, technologies, and resources from our team.</p>
+      <section className="latest-writings">
+        <div className="header">
+          <h2>Latest writings</h2>
+          <p>The latest news, technologies, and resources from our team.</p>
+
+        </div>
         <a href="/all-posts" className="view-all-btn">View all posts</a>
-      </div>
-      <div className="posts-container">
-        {posts.map((post, index) => (
-          <div key={index} className="post-card">
-            <img src={post.image} alt={post.title} className="post-image" />
-            <div className="post-content">
+        <div className="posts-container">
+          {posts.map((post, index) => (
+              <div key={index} className="post-card">
+                <img src={post.image} alt={post.title} className="post-image"/>
+                <div className="post-content">
               <span className="post-meta">
                 {post.author} • {post.date}
               </span>
-              <h3 className="post-title">{post.title}</h3>
-              <p className="post-description">{post.description}</p>
-              <div className="post-tags">
-                {post.tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="tag">{tag}</span>
-                ))}
+                  <h3 className="post-title">{post.title}</h3>
+                  <p className="post-description">{post.description}</p>
+                  <div className="post-tags">
+                    {post.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
   );
 };
 
